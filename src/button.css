@@ -1,0 +1,12 @@
+.btn {
+    @apply font-semibold bg-amber-800 text-white;
+    @apply transition duration-200 ease-in-out;
+    @apply cursor-pointer;
+
+    height: 2.75rem;
+    padding-right: 1.75rem;
+    padding-left: 1.75rem;
+
+    @apply border-2 border-transparent; /* transparent border to avoid content shift of a few pixels on hover/focus */
+    border-radius: 8px;
+}

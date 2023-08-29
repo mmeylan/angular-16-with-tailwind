@@ -1,0 +1,27 @@
+
+/*
+    nesting (https://drafts.csswg.org/css-nesting-1/) doesn't work out of the box, except in browsers where it's supported
+    - https://caniuse.com/css-nesting
+*/
+/*div {*/
+/*    & p {*/
+/*        @apply underline;*/
+/*    }*/
+/*}*/
+
+div p {
+    @apply underline;
+}
+
+/*
+    autoprefixer test: should replace `min-resolution: 2dppx` by `-webkit-min-device-pixel-ratio: 2`
+    - Handled by angular cli with browserlist
+*/
+.image {
+    background-image: url("https://www.buildigo.ch/assets/images/buildigo.png?w=126");
+}
+@media (min-resolution: 2dppx) {
+    .image {
+        background-image: url("https://www.buildigo.ch/assets/images/buildigo.png?w=252");
+    }
+}
